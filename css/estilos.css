@@ -1,0 +1,46 @@
+/**
+* Entrevista realizada el día 1 de Junio 2021
+* Interezado: Federico Manzano
+* Empresa Contratante: Mindtu
+* Muchos de los estilos utilizados pertenecen a 
+* https://bodystyle.000webhostapp.com/
+* https://github.com/FedericoManzano/bodystyle
+*/
+
+
+h4 {
+  border-bottom: 2px solid red;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.item .cont-flex {
+  display: flex;
+  width: 700px;
+}
+.item .cont-flex .info {
+  margin-left: 30px;
+  font-size: 15px;
+  width: 50%;
+}
+.item .cont-flex .info a.btn {
+  margin-top: 15px;
+}
+
+#carrito-cargado {
+  position: fixed;
+  right: 3%;
+  top: 3%;
+  border: 1px solid rgba(0, 0, 0, 0.041);
+  border-radius: 5px;
+  width: 35%;
+  padding: 10px;
+  font-size: 13px;
+  z-index: 10;
+  background-color: white;
+}
+
+/*# sourceMappingURL=estilos.css.map */

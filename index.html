@@ -1,0 +1,77 @@
+
+<!--
+    Entrevista realizada el día 1 de Junio 2021
+    Interezado: Federico Manzano
+    Empresa Contratante: Mindtu
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bodystyle CSS https://github.com/FedericoManzano/bodystyle -->
+    <link  rel="stylesheet"  href="https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/css/bodystyle.min.css">
+    
+    <!-- Estilos compilados de sass -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <title>Proyecto Entrevista Mindtu</title>
+</head>
+<body>
+    <!---------------------------------------- PRODUCTOS ------------------------------------------>
+    
+    <!-- En esta seccion estan el listado de productos del JSON-->
+    <section id="app" class="mar-4 ancho-60 ancho-s-100 pi-15 pi-m-5 pi-s-0">
+        <h4 class="pab-1">Listado de productos</h4>
+        <!-- Se cargan el listado de productos -->
+    </section>
+
+    <!---------------------------------------- CARRITO ------------------------------------------>
+
+
+    <!-- En esta seccion está toda la vista del carrito -->
+    <section id="carrito-cargado">
+        <h6>Carrito</h6>
+        <table>
+            <!-- 
+                Cuando se seleccionan productos 
+                se añaden los elementos de la tabla
+            -->
+        </table>
+
+        <!-- Muestra el total parcial -->
+        <p id="total" class="mar-1"></p>
+
+        <!-- Permite al usuario comprar -->
+        <a id="comprar" class="badge-sm badge-azul mar-1 ">Comprar</a>
+
+        <!-- Vacia el carrito -->
+        <a id="vaciar" class="badge-sm badge-rojo mar-1">Vaciar</a>
+
+        <!-- Muestra el precio total de la compra una vez efectuada -->
+        <section id="comprado" class="c-verde mar-3 fz-20"></section>
+
+    </section>
+
+    <!---------------------------------------- INCLUDE ------------------------------------------>
+    
+    <!-- CDN JQUERY -->
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+    </script>
+
+    <!-- CDN BODYSTYLE https://github.com/FedericoManzano/bodystyle -->
+    <script src="https://rawcdn.githack.com/FedericoManzano/bodystyle/58a25e885718d0b2db6675c502ce6a41a45f373c/dist/js/bodystyle.min.js"></script>
+    
+
+    <!-- productos JSON devuelve la variable productos -->
+    <script src="js/productos.js"></script>
+
+    <!-- Logica de lo pedido -->
+    <script src="js/app.js"></script>
+</body>
+</html>
