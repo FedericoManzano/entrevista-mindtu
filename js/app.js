@@ -100,12 +100,24 @@
         })
     }
 
+    const actualizarStock = () => {
+        productos.map( (pro) => {
+            carrito.map( (ele) => {
+                if(pro.nombre === ele.nombre)
+                    pro.stock --
+            })
+        })
+
+        cargarProductos()
+
+    }
+
     /**
      * Funcion para cargar el producto dentro 
      * del los productos desde el JSON al HTML
      */
     const cargarProductos = () => {
-      
+        $("#app").html("")
         // Recorro los productos 
         productos.map( ( ele ) => {
             
@@ -124,7 +136,8 @@
                             <p class="f-grosor-9 precio">
                                 ${ele.precio}
                             </p>
-                            <p class="stock" style="display:none">
+                            <span>Stock</span>
+                            <p class="stock" >
                                 ${ele.stock}
                             </p>
                             <a class="btn-sm fd-verde mar-1 carrito">Carrito</a>
@@ -300,7 +313,7 @@
             
             // Actualiza el total en la vista
             $("#comprado").html(`<span>Total: $ ${total}</span>`)
-
+            actualizarStock()
             // Vacia la vista
             vaciar()
 
@@ -318,6 +331,7 @@
              * en este caso
              */
             actualizarCosto()
+            cargar()
 
         })
     } 
@@ -326,8 +340,8 @@
         for(let i = 1; i <= localStorage.length; i ++) {
             let obj = JSON.parse ( localStorage.getItem(i) )
             carrito.push(obj)
-            console.log(obj)
         }
+        enumerar()
     }
 
     const eliminarLocalStorage = (id) => {
@@ -351,3 +365,4 @@
 })()
 
 Compras.init()
+
